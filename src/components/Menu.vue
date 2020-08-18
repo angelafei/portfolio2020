@@ -14,7 +14,8 @@
           <router-link to="/skills">Skills</router-link>
         </li>
         <li>
-          <router-link to="/contact">Contact</router-link>
+          <!-- <router-link to="/contact">Contact</router-link> -->
+          <a href="mailto:future2931@gmail.com">Contact</a>
         </li>
       </ul>
     </div>

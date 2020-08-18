@@ -3,6 +3,7 @@
     <div class="title-container">
       <h1>Hi, I am Angela Fei</h1>
       <p>Front-end developer with over 6 years of commercial experience working in UK, Australia and Taiwan.</p>
+      <p>Love nature and simplicity.</p>
       <router-link to="/skills">
         <button>My skill set</button>
       </router-link>
@@ -20,6 +21,7 @@
     box-sizing: border-box;
     display: flex;
     align-items: center;
+    background: url('../assets/images/bg3.png') 80% 76% no-repeat;
 
     .title-container {
       display: flex;
