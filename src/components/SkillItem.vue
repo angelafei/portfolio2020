@@ -44,8 +44,8 @@ export default {
 .scene {
   height: 100px;
   perspective: 600px;
-  border-radius: .2rem;
-  overflow: hidden;
+  // border-radius: .2rem;
+  // overflow: hidden;
   padding: 5px;
 }
 
@@ -71,6 +71,8 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
+  border-radius: .2rem;
+  overflow: hidden;
   // line-height: 260px;
   // text-align: center;
   // font-weight: bold;

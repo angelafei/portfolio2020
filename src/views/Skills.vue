@@ -67,53 +67,178 @@
     <div class="skill-group">
       <h3>Programming (Back-end-end)</h3>
       <ul>
-        <li><SkillItem :percentage="70" type="nodejs" /></li>
-        <li><SkillItem :percentage="50" type="php" /></li>
-        <li><SkillItem :percentage="50" type="python" /></li>
+        <li>
+          <SkillItem :percentage="60" type="nodejs">
+            <p>experience: 6 months</p>
+            <p>Projects:
+              <a href="https://help.nowtv.com/article/watching-now-tv-on-a-mac" target="_blank">NowTV Player (using electron)</a>,
+              <span>Internal Project in Hon-Hai (Foxconn)</span>
+            </p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="60" type="php">
+            <p>experience: 6 months</p>
+            <p>Project:
+              <a href="https://www.dudooeat.com/" target="_blank">Dudoo analysis platform</a>,
+            </p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="60" type="python">
+            <p>experience: 6 months</p>
+            <p>Project:
+              <a href="https://www.dudooeat.com/" target="_blank">Dudoo crawler and integration testing</a>
+            </p>
+          </SkillItem>
+        </li>
       </ul>
     </div>
     <div class="skill-group">
       <h3>Styling</h3>
       <ul>
-        <li><SkillItem :percentage="85" type="css3" /></li>
-        <li><SkillItem :percentage="70" type="bootstrap" /></li>
-        <li><SkillItem :percentage="70" type="tailwind" /></li>
-        <li><SkillItem :percentage="90" type="sass" /></li>
+        <li>
+          <SkillItem :percentage="85" type="css3">
+            <p>experience: 10 years</p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="80" type="bootstrap">
+            <p>experience: 2 years</p>
+            <p>Projects:
+              <a href="https://cameo.tw/3/ai/case-02.html" target="_blank">Data Analysis (Cameo)</a>,
+              <span>Internal Project in Hon-Hai (Foxconn)</span>
+            </p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="70" type="tailwind">
+            <p>experience: 3 months</p>
+            <p>Project: <a href="https://stackla.com/" target="_blank">Stackla's AI-powered enterprise UGC platform</a></p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="90" type="sass">
+            <p>experience: 3 years</p>
+            <p>Projects:
+              <a href="https://www.dudooeat.com/" target="_blank">Dudoo platforms (webapp, analysis platform, POS)</a>,
+              <span>Internal Project in Hon-Hai (Foxconn)</span>
+            </p>
+          </SkillItem>
+        </li>
       </ul>
     </div>
-    <!-- <div class="skill-group">
+    <div class="skill-group">
       <h3>Testing</h3>
       <ul>
-        <li><SkillItem :percentage="90" type="mocha" /></li>
-        <li><SkillItem :percentage="90" type="chai" /></li>
-        <li><SkillItem :percentage="75" type="cypress" /></li>
-        <li><SkillItem :percentage="85" type="selenium" /></li>
-        <li><SkillItem :percentage="50" type="robot framework" /></li>
+        <li>
+          <SkillItem :percentage="90" type="mocha">
+            <p>experience: 4 years</p>
+            <p>unit-testing</p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="90" type="chai">
+            <p>experience: 4 years</p>
+            <p>unit-testing</p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="90" type="sinon">
+            <p>experience: 4 years</p>
+            <p>unit-testing</p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="75" type="cypress">
+            <p>experience:  6 months</p>
+            <p>unit-testing</p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="85" type="selenium">
+            <p>experience: 1.5 years</p>
+            <p>integration-testing, e2e testing, crawler</p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="50" type="robot framework">
+            <p>experience: 2 months</p>
+            <p>integration-testing, e2e testing</p>
+          </SkillItem>
+        </li>
       </ul>
-    </div> -->
+    </div>
     <div class="skill-group">
       <h3>Other Tools</h3>
       <ul>
-        <li><SkillItem :percentage="80" type="gulp" /></li>
-        <li><SkillItem :percentage="85" type="git" /></li>
-        <li><SkillItem :percentage="75" type="webpack" /></li>
-        <li><SkillItem :percentage="70" type="babel" /></li>
+        <li>
+          <SkillItem :percentage="80" type="gulp">
+            <p>experience: 1.5 years</p>
+            <p>bundling, code uglify</p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="85" type="git">
+            <p>experience: 4.5 years</p>
+            <p>collabration, version control</p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="75" type="webpack">
+            <p>experience: 2 years</p>
+            <p>bundling, code uglify, optimising</p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="70" type="babel">
+            <p>experience: 2 years</p>
+            <p>JavaScript compiler</p>
+          </SkillItem>
+        </li>
       </ul>
     </div>
     <div class="skill-group">
       <h3>Adobe Creative Suites</h3>
       <ul>
-        <li><SkillItem :percentage="75" type="photoshop" /></li>
-        <li><SkillItem :percentage="70" type="illustrator" /></li>
-        <li><SkillItem :percentage="80" type="dreamweaver" /></li>
+        <li>
+          <SkillItem :percentage="75" type="photoshop">
+            <p>experience: 4 years</p>
+            <p>image editing</p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="70" type="illustrator">
+            <p>experience: 4 years</p>
+            <p>creating drawings, illustrations, and artwork</p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="80" type="dreamweaver">
+            <p>experience: 3 years</p>
+            <p>creating, publishing, and managing websites and mobile content</p>
+          </SkillItem>
+        </li>
       </ul>
     </div>
     <div class="skill-group">
       <h3>OS</h3>
       <ul>
-        <li><SkillItem :percentage="85" type="mac" /></li>
-        <li><SkillItem :percentage="70" type="windows" /></li>
-        <li><SkillItem :percentage="75" type="linux" /></li>
+        <li>
+          <SkillItem :percentage="85" type="mac">
+            <p>experience: 8 years</p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="70" type="windows">
+            <p>experience: 10 years</p>
+          </SkillItem>
+        </li>
+        <li>
+          <SkillItem :percentage="75" type="linux">
+            <p>experience: 2.5 years</p>
+          </SkillItem>
+        </li>
       </ul>
     </div>
   </div>
@@ -136,8 +261,12 @@ export default {
   padding: 2rem;
 
   h2 {
+    display: inline-block;
     font-size: 2rem;
     font-weight: bold;
+    text-decoration: underline;
+    text-underline-position: under;
+    padding-bottom: .8rem;
   }
 
   .guide {
