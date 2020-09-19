@@ -1,11 +1,17 @@
 <template>
   <div id="app">
     <div class="wrapper">
-      <div class="menu-container">
-        <Menu />
+      <div id="navbar-small" role="navigation" v-bind:class="{ open: !isOpen }" v-on:click="isOpen = !isOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-wrapper" v-bind:class="{ open: !isOpen }">
+        <Menu v-on:toggleMenu="toggleMenu" />
       </div>
       <div class="content-container">
-        <router-view/>
+        <router-view />
       </div>
     </div>
   </div>
@@ -72,7 +78,7 @@ table {
   font-weight: 300;
   font-style: normal;
 }
-@font-face{
+@font-face {
     font-family: 'ftnk';
     src:url(https://use.typekit.net/af/9b05f3/000000000000000000013365/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),
     url(https://use.typekit.net/af/9b05f3/000000000000000000013365/27/d?subset_id=2&fvd=n4&v=3) format("woff"),
@@ -99,7 +105,7 @@ html {
   color: #2c3e50;
 }
 
-.menu-container {
+.menu-wrapper {
   width: 250px;
   height: 100%;
   position: fixed;
@@ -118,6 +124,88 @@ html {
   height: 100%;
   padding-left: 250px;
 }
+
+#navbar-small {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  width: 35px;
+  height: 20px;
+  z-index: 99;
+  display: none;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 80%;
+    background: #2c3e50;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2), &:nth-child(3) {
+      top: 8px;
+    }
+    &:nth-child(4) {
+      top: 16px;
+    }
+  }
+}
+
+#navbar-small.open {
+  span:nth-child(1) {
+    top: 8px;
+    width: 0%;
+    left: 50%;
+  }
+
+  span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  span:nth-child(4) {
+    top: 8px;
+    width: 0%;
+    left: 50%;
+  }
+}
+
+/* Small (sm) */
+@media screen and (max-width: 640px) {
+  #navbar-small {
+    display: block;
+  }
+
+  .menu-wrapper {
+    display: none;
+    width: 100%;
+    // top: 50px;
+    z-index: 2;
+    padding-top: 3rem;
+
+    &.open {
+      display: block;
+    }
+  }
+  .content-container {
+    width: 100%;
+    padding: 3rem 0 0 0;
+    z-index: 1;
+  }
+}
 </style>
 
 <script>
@@ -128,6 +216,17 @@ export default {
   name: 'Home',
   components: {
     Menu
+  },
+  data () {
+    return {
+      isOpen: false
+    }
+  },
+  methods: {
+    toggleMenu () {
+      // console.log('MenuIsOpen:', MenuIsOpen)
+      this.isOpen = true
+    }
   }
 }
 </script>

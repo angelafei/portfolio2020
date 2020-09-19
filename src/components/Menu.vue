@@ -8,10 +8,10 @@
     <div class="navs-container">
       <ul>
         <li>
-          <router-link to="/">Home</router-link>
+          <router-link to="/" @click.native="notifyParent">Home</router-link>
         </li>
         <li>
-          <router-link to="/skills">Skills</router-link>
+          <router-link to="/skills" @click.native="notifyParent">Skills</router-link>
         </li>
         <li>
           <!-- <router-link to="/contact">Contact</router-link> -->
@@ -24,7 +24,13 @@
 
 <script>
 export default {
-  name: 'Menu'
+  name: 'Menu',
+  methods: {
+    notifyParent: function () {
+      console.log('notify')
+      this.$emit('toggleMenu')
+    }
+  }
 }
 </script>
 
